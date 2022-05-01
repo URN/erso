@@ -17,7 +17,7 @@ class AuthedStaticHandler(BaseHandler):
         """Get content of a file"""
         path = f"{self.root}/{p}"
         if os.path.isdir(path):
-            files = [f for f in os.listdir(path) if os.path.isfile(f"{path}/{f}")]
+            files = [f for f in os.listdir(path) if os.path.isfile(f"{path}/{f}")][::-1]
             folders = [f for f in os.listdir(path) if os.path.isdir(f"{path}/{f}")]
             self.finish(
                 self.loader.load("Index.html").generate(
