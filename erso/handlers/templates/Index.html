@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    {% include "PrimerIncludes.html" %}
+    <title>URN Show Downloader</title>
+</head>
+
+<body class="color-bg-default">
+    {% include "Header.html" %}
+
+    <div class="Box col-8 mx-auto my-6">
+        <div class="Box-header">
+            <h3 class="Box-title">
+                File
+            </h3>
+        </div>
+        {% if p  %}
+        <div class="Box-header">
+            <a href="/{{p}}..">Up A Directory</a>
+        </div>
+        {% end %}
+        
+        {% for f in folders %}
+
+        <div class="Box-header">
+            <a href="/{{p}}{{f}}">{{f}}</a>
+        </div>
+        {% end %}
+        {% for f in files %}
+
+        <div class="Box-body">
+            <a href="/{{p}}{{f}}">{{f}}</a>
+        </div>
+        {% end %}
+       
+    </div>
+
+</body>
+
+</html>

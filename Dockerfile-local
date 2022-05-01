@@ -1,0 +1,9 @@
+FROM alpine:edge
+RUN apk add --no-cache py3-pip git
+
+COPY erso.sh /bin/erso
+RUN chmod +x /bin/erso
+ENTRYPOINT ["/bin/erso"]
+
+COPY . /tmp
+RUN pip install /tmp

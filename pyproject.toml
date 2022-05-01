@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "erso"
+version = "0.1.0"
+description = ""
+authors = ["Peter Taylor <me@et1.uk>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+tornado = "^6.1"
+ldap3 = "^2.9.1"
+PyJWT = "^2.3.0"
+
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.13.7"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
