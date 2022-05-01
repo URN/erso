@@ -1,7 +1,7 @@
 from os import environ as env
 import os
-from .base import BaseHandler
 from tornado.web import authenticated
+from .base import BaseHandler
 
 
 class IndexHandler(BaseHandler):

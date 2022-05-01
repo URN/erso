@@ -18,4 +18,4 @@ jobs:
         pip install poetry
         poetry install
     - name: Analysing the code with pylint
-      run: poetry run pylint --rcfile=.pylintrc tarkin/
+      run: poetry run pylint --rcfile=.pylintrc erso/

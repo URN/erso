@@ -2,9 +2,8 @@
 
 from os import environ as env
 from tornado.ioloop import IOLoop
-from tornado.web import Application, StaticFileHandler
+from tornado.web import Application
 from erso import handlers
-from os import environ as env
 
 
 def main():
